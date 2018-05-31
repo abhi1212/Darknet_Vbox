@@ -1,0 +1,202 @@
+64bit elf: type=2, abi=7, sm=35, toolkit=80, flags = 0x230523
+Sections:
+Index Offset   Size ES Align   Type   Flags Link     Info Name
+    1     40     be  0  1    STRTAB       0    0        0 .shstrtab
+    2     fe     de  0  1    STRTAB       0    0        0 .strtab
+    3    1e0     60 18  8    SYMTAB       0    2        2 .symtab
+    4    240     24  0  4 CUDA_INFO       0    3        0 .nv.info
+    5    264    100  0  4 CUDA_INFO       0    3        7 .nv.info._Z5sgemmiiiiifPfiS_ifS_i
+    6    364    184  0  4  PROGBITS       2    0        7 .nv.constant0._Z5sgemmiiiiifPfiS_ifS_i
+    7    500    2c0  0 40  PROGBITS       6    3 19000003 .text._Z5sgemmiiiiifPfiS_ifS_i
+
+.section .strtab
+
+.section .shstrtab
+
+.section .symtab
+ index           value           size      info    other  shndx    name  
+   0               0               0        0        0      0     (null)
+   1               0               0        3        0      7     .text._Z5sgemmiiiiifPfiS_ifS_i
+   2               0               0        3        0      6     .nv.constant0._Z5sgemmiiiiifPfiS_ifS_i
+   3               0             704       12       10      7     _Z5sgemmiiiiifPfiS_ifS_i
+
+
+.nv.constant0._Z5sgemmiiiiifPfiS_ifS_i
+0x00000000  0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+
+
+
+.nv.info
+	<0x1>
+	Attribute:	EIATTR_MAX_STACK_SIZE
+	Format:	EIFMT_SVAL
+	Value:	0x3 0x0 
+	<0x2>
+	Attribute:	EIATTR_MIN_STACK_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z5sgemmiiiiifPfiS_ifS_i(0x3)	min stack size: 0x0
+	<0x3>
+	Attribute:	EIATTR_FRAME_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z5sgemmiiiiifPfiS_ifS_i(0x3)	frame size: 0x0
+
+
+.nv.info._Z5sgemmiiiiifPfiS_ifS_i
+	<0x1>
+	Attribute:	EIATTR_PARAM_CBANK
+	Format:	EIFMT_SVAL
+	Value:	0x2 0x440140 
+	<0x2>
+	Attribute:	EIATTR_CBANK_PARAM_SIZE
+	Format:	EIFMT_HVAL
+	Value:	0x44
+	<0x3>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0xc	Offset  : 0x40	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x4>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0xb	Offset  : 0x38	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x5>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0xa	Offset  : 0x34	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x6>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x9	Offset  : 0x30	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x7>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x8	Offset  : 0x28	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x8>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x7	Offset  : 0x20	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x9>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x6	Offset  : 0x18	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x10>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x5	Offset  : 0x14	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x11>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x4	Offset  : 0x10	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x12>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x3	Offset  : 0xc	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x13>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x2	Offset  : 0x8	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x14>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x1	Offset  : 0x4	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x15>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x0	Offset  : 0x0	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x16>
+	Attribute:	EIATTR_CRS_STACK_SIZE
+	Format:	EIFMT_SVAL
+	Value:	0x10 
+	<0x17>
+	Attribute:	EIATTR_S2RCTAID_INSTR_OFFSETS
+	Format:	EIFMT_SVAL
+	Value:	0x10 0x20 
+	<0x18>
+	Attribute:	EIATTR_EXIT_INSTR_OFFSETS
+	Format:	EIFMT_SVAL
+	Value:	0x58 0x290 
+
+
+.text._Z5sgemmiiiiifPfiS_ifS_i
+bar = 0	reg = 25	lmem=0	smem=0
+0x8c8c8c00  0x08809c80  0x089c0006  0x64c03c00  
+0x131c0002  0x86400000  0x111c000e  0x86400000  
+0x129c000a  0x86400000  0x109c0012  0x86400000  
+0x059c0002  0x51080c00  0x051c0812  0x51081000  
+0xa0b8b0b0  0x0800b010  0x291c001e  0x5b181c00  
+0x299c101e  0x5b180000  0x0020003c  0x18000000  
+0x2a1c000a  0x64c03c00  0x009c081d  0xb3181c00  
+0x7f9c000a  0xe4c03c00  0xe000003c  0x12000000  
+0xb010a010  0x08a00010  0x2a1c000a  0x64c03c00  
+0x2a1c000e  0x61c01800  0x009c081d  0xb3481c00  
+0x7f9c0016  0xe4c03c00  0x7f9c000a  0xe4c03c00  
+0x7c20003c  0x12000000  0x2a1c001a  0x64c03c00  
+0xa0100010  0x089c8010  0x021fc062  0x74000000  
+0xff9c1839  0xc88003ff  0x019c141a  0xe0800000  
+0x299c141e  0x51081000  0x009c1429  0xc0800000  
+0x2b1c1842  0x910c6000  0x011c1415  0xc0800000  
+0xb08c8c10  0x08908880  0x019c282e  0xe0800000  
+0x299c2836  0x51081000  0x2b9c1846  0x93186000  
+0x2d1c1c22  0x910c6000  0x2d9c1c26  0x93186000  
+0x001c4028  0xc4800000  0x2b1c2c1a  0x910c6000  
+0x908c109c  0x089c809c  0x001c2030  0xc4800000  
+0x2b9c2c1e  0x93186000  0x071c141e  0xdb181c00  
+0x2d1c344a  0x910c6000  0x001c1818  0xc4800000  
+0x2d9c344e  0x93186000  0x2a9c282e  0x63400000  
+0x10c09480  0x0800b0b8  0x001c4834  0xc4800000  
+0x061c2c26  0xcc000800  0x2a9c180a  0x63400000  
+0x069c080a  0xcc002400  0x9400003c  0x12007fff  
+0x2a1c141e  0x5b181c00  0x4020003c  0x12000000  
+0x10a01000  0x088c10b0  0x021fc042  0x74000000  
+0x019c141a  0xe0800000  0x299c141e  0x51081000  
+0x2b1c1822  0x910c4000  0x009c1415  0xc0800000  
+0x2b9c1826  0x93184000  0x2a1c141e  0x5b181c00  
+0x10dc80b0  0x08b810dc  0x2d1c1c2a  0x910c4000  
+0x2d9c1c2e  0x93184000  0x001c201c  0xc4800000  
+0x001c2818  0xc4800000  0x2a9c1c1e  0x63400000  
+0x031c1c0a  0xcc000800  0xc800003c  0x12007fff  
+0xa0b0a010  0x0800a0dc  0x299c0002  0x51081000  
+0x021fc00e  0x74000000  0x2f1c0012  0x910c0c00  
+0x2f9c0016  0x93180c00  0x001c100c  0xc4800000  
+0x019c0802  0xe2c00000  0x001c1000  0xe4800000  
+0x0000b810  0x08000000  0x7f9c03fe  0xe4c03c00  
+0x001c003c  0x18000000  0xfc1c003c  0x12007fff  
+0x001c3c02  0x85800000  0x001c3c02  0x85800000  
+0x001c3c02  0x85800000  0x001c3c02  0x85800000  
+
+

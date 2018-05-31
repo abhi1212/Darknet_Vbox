@@ -1,0 +1,141 @@
+
+
+
+
+
+
+
+.version 5.0
+.target sm_50
+.address_size 64
+
+
+
+.visible .entry _Z28forward_avgpool_layer_kerneliiiiPfS_(
+.param .u32 _Z28forward_avgpool_layer_kerneliiiiPfS__param_0,
+.param .u32 _Z28forward_avgpool_layer_kerneliiiiPfS__param_1,
+.param .u32 _Z28forward_avgpool_layer_kerneliiiiPfS__param_2,
+.param .u32 _Z28forward_avgpool_layer_kerneliiiiPfS__param_3,
+.param .u64 _Z28forward_avgpool_layer_kerneliiiiPfS__param_4,
+.param .u64 _Z28forward_avgpool_layer_kerneliiiiPfS__param_5
+)
+{
+.reg .pred %p<4>;
+.reg .f32 %f<10>;
+.reg .b32 %r<21>;
+.reg .b64 %rd<12>;
+
+
+ld.param.u32 %r12, [_Z28forward_avgpool_layer_kerneliiiiPfS__param_0];
+ld.param.u32 %r10, [_Z28forward_avgpool_layer_kerneliiiiPfS__param_1];
+ld.param.u32 %r11, [_Z28forward_avgpool_layer_kerneliiiiPfS__param_2];
+ld.param.u64 %rd5, [_Z28forward_avgpool_layer_kerneliiiiPfS__param_4];
+ld.param.u64 %rd6, [_Z28forward_avgpool_layer_kerneliiiiPfS__param_5];
+mov.u32 %r1, %nctaid.x;
+mov.u32 %r2, %ctaid.y;
+mov.u32 %r3, %ctaid.x;
+mad.lo.s32 %r13, %r1, %r2, %r3;
+mov.u32 %r4, %ntid.x;
+mov.u32 %r5, %tid.x;
+mad.lo.s32 %r6, %r13, %r4, %r5;
+setp.ge.s32	%p1, %r6, %r12;
+@%p1 bra BB0_5;
+
+cvta.to.global.u64 %rd7, %rd6;
+mul.wide.s32 %rd8, %r6, 4;
+add.s64 %rd1, %rd7, %rd8;
+mov.u32 %r20, 0;
+st.global.u32 [%rd1], %r20;
+mul.lo.s32 %r7, %r11, %r10;
+mov.f32 %f9, 0f00000000;
+setp.lt.s32	%p2, %r7, 1;
+@%p2 bra BB0_4;
+
+cvta.to.global.u64 %rd9, %rd5;
+mad.lo.s32 %r18, %r4, %r13, %r5;
+mul.lo.s32 %r19, %r7, %r18;
+mul.wide.s32 %rd10, %r19, 4;
+add.s64 %rd11, %rd9, %rd10;
+mov.f32 %f9, 0f00000000;
+
+BB0_3:
+ld.global.f32 %f6, [%rd11];
+add.f32 %f9, %f6, %f9;
+st.global.f32 [%rd1], %f9;
+add.s64 %rd11, %rd11, 4;
+add.s32 %r20, %r20, 1;
+setp.lt.s32	%p3, %r20, %r7;
+@%p3 bra BB0_3;
+
+BB0_4:
+cvt.rn.f32.s32	%f7, %r7;
+div.rn.f32 %f8, %f9, %f7;
+st.global.f32 [%rd1], %f8;
+
+BB0_5:
+ret;
+}
+
+
+.visible .entry _Z29backward_avgpool_layer_kerneliiiiPfS_(
+.param .u32 _Z29backward_avgpool_layer_kerneliiiiPfS__param_0,
+.param .u32 _Z29backward_avgpool_layer_kerneliiiiPfS__param_1,
+.param .u32 _Z29backward_avgpool_layer_kerneliiiiPfS__param_2,
+.param .u32 _Z29backward_avgpool_layer_kerneliiiiPfS__param_3,
+.param .u64 _Z29backward_avgpool_layer_kerneliiiiPfS__param_4,
+.param .u64 _Z29backward_avgpool_layer_kerneliiiiPfS__param_5
+)
+{
+.reg .pred %p<4>;
+.reg .f32 %f<6>;
+.reg .b32 %r<20>;
+.reg .b64 %rd<12>;
+
+
+ld.param.u32 %r12, [_Z29backward_avgpool_layer_kerneliiiiPfS__param_0];
+ld.param.u32 %r10, [_Z29backward_avgpool_layer_kerneliiiiPfS__param_1];
+ld.param.u32 %r11, [_Z29backward_avgpool_layer_kerneliiiiPfS__param_2];
+ld.param.u64 %rd5, [_Z29backward_avgpool_layer_kerneliiiiPfS__param_4];
+ld.param.u64 %rd6, [_Z29backward_avgpool_layer_kerneliiiiPfS__param_5];
+mov.u32 %r1, %nctaid.x;
+mov.u32 %r2, %ctaid.y;
+mov.u32 %r3, %ctaid.x;
+mad.lo.s32 %r13, %r1, %r2, %r3;
+mov.u32 %r4, %ntid.x;
+mov.u32 %r5, %tid.x;
+mad.lo.s32 %r6, %r13, %r4, %r5;
+setp.ge.s32	%p1, %r6, %r12;
+@%p1 bra BB1_4;
+
+mul.lo.s32 %r7, %r11, %r10;
+setp.lt.s32	%p2, %r7, 1;
+@%p2 bra BB1_4;
+
+cvta.to.global.u64 %rd7, %rd5;
+cvta.to.global.u64 %rd8, %rd6;
+mul.wide.s32 %rd9, %r6, 4;
+add.s64 %rd1, %rd8, %rd9;
+cvt.rn.f32.s32	%f1, %r7;
+mad.lo.s32 %r16, %r4, %r13, %r5;
+mul.lo.s32 %r18, %r7, %r16;
+mul.wide.s32 %rd10, %r18, 4;
+add.s64 %rd11, %rd7, %rd10;
+mov.u32 %r19, 0;
+
+BB1_3:
+ld.global.f32 %f2, [%rd1];
+div.rn.f32 %f3, %f2, %f1;
+ld.global.f32 %f4, [%rd11];
+add.f32 %f5, %f3, %f4;
+st.global.f32 [%rd11], %f5;
+add.s64 %rd11, %rd11, 4;
+add.s32 %r19, %r19, 1;
+setp.lt.s32	%p3, %r19, %r7;
+@%p3 bra BB1_3;
+
+BB1_4:
+ret;
+}
+
+
+

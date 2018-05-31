@@ -1,0 +1,64 @@
+
+
+
+
+
+
+
+.version 5.0
+.target sm_50
+.address_size 64
+
+
+
+.visible .entry _Z28yoloswag420blazeit360noscopePfiS_ff(
+.param .u64 _Z28yoloswag420blazeit360noscopePfiS_ff_param_0,
+.param .u32 _Z28yoloswag420blazeit360noscopePfiS_ff_param_1,
+.param .u64 _Z28yoloswag420blazeit360noscopePfiS_ff_param_2,
+.param .f32 _Z28yoloswag420blazeit360noscopePfiS_ff_param_3,
+.param .f32 _Z28yoloswag420blazeit360noscopePfiS_ff_param_4
+)
+{
+.reg .pred %p<3>;
+.reg .f32 %f<9>;
+.reg .b32 %r<9>;
+.reg .b64 %rd<8>;
+
+
+ld.param.u64 %rd2, [_Z28yoloswag420blazeit360noscopePfiS_ff_param_0];
+ld.param.u32 %r2, [_Z28yoloswag420blazeit360noscopePfiS_ff_param_1];
+ld.param.u64 %rd3, [_Z28yoloswag420blazeit360noscopePfiS_ff_param_2];
+ld.param.f32 %f3, [_Z28yoloswag420blazeit360noscopePfiS_ff_param_3];
+ld.param.f32 %f4, [_Z28yoloswag420blazeit360noscopePfiS_ff_param_4];
+mov.u32 %r3, %ctaid.x;
+mov.u32 %r4, %nctaid.x;
+mov.u32 %r5, %ctaid.y;
+mad.lo.s32 %r6, %r4, %r5, %r3;
+mov.u32 %r7, %ntid.x;
+mov.u32 %r8, %tid.x;
+mad.lo.s32 %r1, %r6, %r7, %r8;
+setp.ge.s32	%p1, %r1, %r2;
+@%p1 bra BB0_4;
+
+cvta.to.global.u64 %rd4, %rd2;
+cvta.to.global.u64 %rd5, %rd3;
+mul.wide.s32 %rd6, %r1, 4;
+add.s64 %rd7, %rd5, %rd6;
+ld.global.f32 %f6, [%rd7];
+setp.lt.f32	%p2, %f6, %f3;
+add.s64 %rd1, %rd4, %rd6;
+mov.f32 %f8, 0f00000000;
+@%p2 bra BB0_3;
+
+ld.global.f32 %f7, [%rd1];
+mul.f32 %f8, %f7, %f4;
+
+BB0_3:
+st.global.f32 [%rd1], %f8;
+
+BB0_4:
+ret;
+}
+
+
+

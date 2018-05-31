@@ -1,0 +1,119 @@
+64bit elf: type=2, abi=7, sm=30, toolkit=80, flags = 0x1e051e
+Sections:
+Index Offset   Size ES Align   Type   Flags Link     Info Name
+    1     40     fa  0  1    STRTAB       0    0        0 .shstrtab
+    2    13a    129  0  1    STRTAB       0    0        0 .strtab
+    3    268     60 18  8    SYMTAB       0    2        2 .symtab
+    4    2c8     24  0  4 CUDA_INFO       0    3        0 .nv.info
+    5    2ec     68  0  4 CUDA_INFO       0    3        7 .nv.info._Z28yoloswag420blazeit360noscopePfiS_ff
+    6    354    160  0  4  PROGBITS       2    0        7 .nv.constant0._Z28yoloswag420blazeit360noscopePfiS_ff
+    7    4c0     c0  0 40  PROGBITS       6    3  6000003 .text._Z28yoloswag420blazeit360noscopePfiS_ff
+
+.section .strtab
+
+.section .shstrtab
+
+.section .symtab
+ index           value           size      info    other  shndx    name  
+   0               0               0        0        0      0     (null)
+   1               0               0        3        0      7     .text._Z28yoloswag420blazeit360noscopePfiS_ff
+   2               0               0        3        0      6     .nv.constant0._Z28yoloswag420blazeit360noscopePfiS_ff
+   3               0             192       12       10      7     _Z28yoloswag420blazeit360noscopePfiS_ff
+
+
+.nv.constant0._Z28yoloswag420blazeit360noscopePfiS_ff
+0x00000000  0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  0x00000000  
+0x00000000  0x00000000  0x00000000  
+
+
+.nv.info
+	<0x1>
+	Attribute:	EIATTR_MAX_STACK_SIZE
+	Format:	EIFMT_SVAL
+	Value:	0x3 0x0 
+	<0x2>
+	Attribute:	EIATTR_MIN_STACK_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z28yoloswag420blazeit360noscopePfiS_ff(0x3)	min stack size: 0x0
+	<0x3>
+	Attribute:	EIATTR_FRAME_SIZE
+	Format:	EIFMT_SVAL
+	Value:	function: _Z28yoloswag420blazeit360noscopePfiS_ff(0x3)	frame size: 0x0
+
+
+.nv.info._Z28yoloswag420blazeit360noscopePfiS_ff
+	<0x1>
+	Attribute:	EIATTR_PARAM_CBANK
+	Format:	EIFMT_SVAL
+	Value:	0x2 0x200140 
+	<0x2>
+	Attribute:	EIATTR_CBANK_PARAM_SIZE
+	Format:	EIFMT_HVAL
+	Value:	0x20
+	<0x3>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x4	Offset  : 0x1c	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x4>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x3	Offset  : 0x18	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x5>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x2	Offset  : 0x10	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x6>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x1	Offset  : 0x8	Size    : 0x4
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x7>
+	Attribute:	EIATTR_KPARAM_INFO
+	Format:	EIFMT_SVAL
+	Value:	Index : 0x0	Ordinal : 0x0	Offset  : 0x0	Size    : 0x8
+		Pointee's logAlignment : 0x0	Space : 0x0	cbank : 0x1f	Parameter Space : CBANK	
+	<0x8>
+	Attribute:	EIATTR_CRS_STACK_SIZE
+	Format:	EIFMT_SVAL
+	Value:	0x30 
+
+
+.text._Z28yoloswag420blazeit360noscopePfiS_ff
+bar = 0	reg = 6	lmem=0	smem=0
+0x42323007  0x22c28282  0x10005de4  0x28004001  
+0x9400dc04  0x2c000000  0x98001c04  0x2c000000  
+0x84011c04  0x2c000000  0xd0001ca3  0x20064000  
+0xa0001ca3  0x20084000  0x2001dc23  0x1b0e4005  
+0x82c282e7  0x2292c202  0x000001e7  0x80000000  
+0x10015de2  0x18000000  0x40009ca3  0x200b8005  
+0x5000dce3  0x208a8005  0x00209c85  0x84000000  
+0x00011ca3  0x200b8005  0x10015ce3  0x208a8005  
+0x8372c047  0x2002e002  0xfc001de4  0x28000000  
+0x6021dc00  0x208e4005  0x0040a085  0x84000000  
+0x70202000  0x58004005  0x00401c85  0x94000000  
+0x00001de7  0x80000000  0xe0001de7  0x4003ffff  
+
+

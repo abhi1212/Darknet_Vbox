@@ -1,0 +1,2 @@
+ptxas _ptx2_uI5Xs9, line 8; fatal   : Unsupported .version 5.0; current version is '4.3'
+ptxas fatal   : Ptx assembly aborted due to errors
